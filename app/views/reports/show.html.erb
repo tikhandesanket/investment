@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @report.amount %>
+</p>
+
+<p>
+  <strong>From date:</strong>
+  <%= @report.from_date %>
+</p>
+
+<p>
+  <strong>To date:</strong>
+  <%= @report.to_date %>
+</p>
+
+<p>
+  <strong>Investment:</strong>
+  <%= @report.investment %>
+</p>
+
+<p>
+  <strong>Fund:</strong>
+  <%= @report.fund %>
+</p>
+
+<%= link_to 'Edit', edit_report_path(@report) %> |
+<%= link_to 'Back', reports_path %>

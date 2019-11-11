@@ -1,0 +1,48 @@
+
+
+<p id="notice"><%= notice %></p>
+
+<h1>Reports</h1>
+
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th>Amount</th>
+    <th>From date</th>
+    <th>To date</th>
+    <th>Investment</th>
+    <th>Fund</th>
+    <th>View Report</th>
+  </tr>
+  </thead>
+  <% @reports.each do |report| %>
+      <tr>
+        <td><%= report.amount %></td>
+        <td><%= report.from_date %></td>
+        <td><%= report.to_date %></td>
+        <td><%= report.investment %></td>
+        <td><%= report.fund %></td>
+
+        <td><%= link_to "view", report_path(report), class:'btn btn-block btn-warning'%></td>
+              </tr>
+          <% end %>
+        <tr>
+
+          <td>
+            <%= link_to 'New Report', new_report_path ,class: 'btn btn-block btn-warning'%>
+          </td>
+
+          <td>
+
+            <%= link_to 'Download Report', download_report_reports_path ,class: 'btn btn-block btn-warning'%>
+          </td>
+        </tr>
+
+
+</table>
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+<%= form_with(model: report, local: true) do |form| %>
+<%#= link_to "Export report as spreadsheet", download_reports_path(from_date:"10 November 2019",format: "xlsx"), class: "btn btn-danger" %>
+
+  <% if report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(report.errors.count, "error") %> prohibited this report from being saved:</h2>
+
+      <ul>
+      <% report.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+  <div class="field">
+    <%= form.label :from_date %>
+    <%= form.datetime_select :from_date %>
+  </div>
+
+  <!--<div class="field">-->
+    <!--<%= form.label :to_date %>-->
+    <!--<%= form.datetime_select :to_date %>-->
+      <!--</div>-->
+
+    <div class="field">
+      <%= form.label :investment_fund %>
+      <%= form.select :investment, ["Axis Long Term Equity Fund","HDFC Long Term Equity Fund","Short Term Equity Fund"]%>
+      <%#= form.text_field :investment %>
+    </div>
+
+    <div class="field">
+      <%= form.label :amount %>
+      <%= form.number_field :amount %>
+    </div>
+
+
+
+  <div class="actions">
+    <%= form.submit "clear", :type => "reset" %>
+  </div>
+<% end %>

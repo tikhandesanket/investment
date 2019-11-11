@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: 1
+  from_date: 2019-11-09 15:07:13
+  to_date: 2019-11-09 15:07:13
+  investment: MyString
+  fund: MyString
+
+two:
+  amount: 1
+  from_date: 2019-11-09 15:07:13
+  to_date: 2019-11-09 15:07:13
+  investment: MyString
+  fund: MyString

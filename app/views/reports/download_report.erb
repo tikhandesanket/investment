@@ -1,0 +1,7 @@
+
+      <%= form_tag download_reports_path(format: "xlsx"), :method => 'get', class: "form-inline"  do %>
+          Investment Type :  <%= select_tag "book", options_for_select(["Axis Long Term Equity Fund","HDFC Long Term Equity Fund","Short Term Equity Fund"]) %>
+          <br><br>
+          Select Date : <%= date_field_tag :from_date, params[:from_date], class: "form-control mb-2 mr-sm-2"%>
+          <%= submit_tag "Download Nav History", class: 'btn btn-primary mb-2' %>
+      <%end%>
